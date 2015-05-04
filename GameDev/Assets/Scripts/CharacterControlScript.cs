@@ -7,8 +7,9 @@ public class CharacterControlScript : MonoBehaviour {
 	public LayerMask floor;
 	public float jumpForce = 10f;
 	public Transform groundCheck;
+    public float CATCH_UP_SPEED = 3f;
 
-
+    private Vector2 originalPosition;
 	bool grounded = false;
 	float groundRadius = 0.2f;
 	bool touchingFloor = false;
@@ -19,6 +20,7 @@ public class CharacterControlScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
+        originalPosition = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -37,10 +39,16 @@ public class CharacterControlScript : MonoBehaviour {
 			rb2d.AddForce (new Vector2 (0f, jumpForce));
 			jump = false;
 		}
-		if (!touchingFloor && grounded) {
-			rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
-		} else {
-			rb2d.velocity = new Vector2 (0, rb2d.velocity.y);
-		}
+
+        if (transform.position.x < originalPosition.x)
+        {
+            speed = CATCH_UP_SPEED;
+        }
+        else
+        {
+            speed = 0f;
+        }
+
+		rb2d.velocity = new Vector2 (speed, rb2d.velocity.y);
 	}
 }

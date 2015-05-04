@@ -5,17 +5,16 @@ public class ObstaclesSpwanner : MonoBehaviour {
 	public GameObject platform;
 	private float verticalMin = 2f;
 	private float verticalMax = 7f;
-	private float horizontalMin = 20;
-	private float horizontalMax = 30f;
+	private float horizontalMin = 30;
+	private float horizontalMax = 40f;
 	int maxPlatforms = 5;
 	int ticks = 0;
 
-	public const int SPAWN_INTERVAL = 200;
+	public const int SPAWN_INTERVAL = 150;
 
-	private Vector2 originPosition;
 	// Use this for initialization
 	void Start () {
-		originPosition = transform.position;
+		
 		Spawn ();
 	}
 	
@@ -31,7 +30,7 @@ public class ObstaclesSpwanner : MonoBehaviour {
 	void Spawn()
 	{
 		int sign = Random.Range (0, 1);
-		Vector2 randomPosition = originPosition + new Vector2 (Random.Range(horizontalMin, horizontalMax), Random.Range (verticalMin*(sign -1), verticalMax * (sign-1)));
+		Vector2 randomPosition = new Vector2 (Random.Range(horizontalMin, horizontalMax), Random.Range (verticalMin*(sign -1), verticalMax * (sign-1)));
 		Instantiate(platform, randomPosition, Quaternion.identity);
 	}
 }

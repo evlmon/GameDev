@@ -1,0 +1,15 @@
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\Assembly-CSharp.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\UnityEditor.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\UnityEngine.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\UnityEngine.UI.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\Mono.Cecil.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\Unity.DataContract.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\Unity.CecilTools.dll
+D:\Unity\GameDev\GameDev\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+D:\Unity\GameDev\GameDev\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+D:\Unity\GameDev\GameDev\obj\Debug\Assembly-CSharp.dll
+D:\Unity\GameDev\GameDev\obj\Debug\Assembly-CSharp.pdb
