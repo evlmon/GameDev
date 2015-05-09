@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\DestroyObstacles.cs" />
      <Compile Include="Assets\Scripts\FlipLevel.cs" />
      <Compile Include="Assets\Scripts\MoveObstacles.cs" />
+     <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\ObstaclesSpwanner.cs" />
      <Compile Include="Assets\Scripts\Reset.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
