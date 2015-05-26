@@ -3,18 +3,15 @@ using System.Collections;
 
 public class Mover : MonoBehaviour {
 
-    public float speed;
-
-    private Rigidbody2D rb2d;
-    
-    // Use this for initialization
-	void Start () {
-        rb2d = GetComponent<Rigidbody2D>();
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if(!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("LevelBoundary"))
+		{
+			Destroy (this.gameObject);
+		}
+		if (other.gameObject.CompareTag ("Monster")) 
+		{
+			Destroy(other.gameObject);
+		}
 	}
-
-    public void Move(Vector3 direction, Vector3 rotation)
-    {
-        //transform.rotation =Quaternion. rotation;
-        rb2d.velocity = direction;   
-    }
 }

@@ -17,5 +17,12 @@ public class MoveObstacles : MonoBehaviour {
 			var rb2d = obstacle.GetComponent<Rigidbody2D>();
 			rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
 		}
+
+		var monsters = GameObject.FindGameObjectsWithTag("Monster");  //returns GameObject[]
+		foreach(var monster in monsters)
+		{
+			var rb2d = monster.GetComponent<Rigidbody2D>();
+			rb2d.velocity = new Vector2(speed, rb2d.velocity.y);
+		}
 	}
 }

@@ -22,6 +22,7 @@ public class FlipLevel : MonoBehaviour {
 	{
 		if (true == flip) 
 		{
+			upsideDown = !upsideDown;
 			FlipAllObstacles();
 			flip = false;
 		}
@@ -30,13 +31,19 @@ public class FlipLevel : MonoBehaviour {
 	void FlipAllObstacles()
 	{
 		var obstacles = GameObject.FindGameObjectsWithTag("Obstacle");  //returns GameObject[]
+		var monsters = GameObject.FindGameObjectsWithTag ("Monster");
 		foreach(var obstacle in obstacles)
 		{
 			Flip (obstacle);
 		}
+
+		foreach(var monster in monsters)
+		{
+			Flip (monster);
+		}
 	}
 
-	void Flip(GameObject gameObject){
+	public void Flip(GameObject gameObject){
 		var transform = gameObject.GetComponent<Transform> ();
 		Vector3 theScale = transform.localScale;
 		theScale.y *= -1;

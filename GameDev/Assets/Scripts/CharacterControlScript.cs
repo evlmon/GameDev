@@ -8,11 +8,12 @@ public class CharacterControlScript : MonoBehaviour {
 	public float jumpForce = 10f;
 	public Transform groundCheck;
     public float CATCH_UP_SPEED = 3f;
-    public float BOLT_SPEED = 5;
+    public float BOLT_SPEED = 200;
 
     public GameObject shot;
     public Transform shotSpawn;
-
+	public bool isDead = false;
+	
     private Vector2 originalPosition;
 	bool grounded = false;
 	float groundRadius = 0.2f;
@@ -41,9 +42,15 @@ public class CharacterControlScript : MonoBehaviour {
             mouseClickPosition = Camera.main.ScreenToWorldPoint(mouseClickPosition);
             var xvelocityVector = (shotSpawn.position.x) - (mouseClickPosition.x);
             var yvelocityVector = (shotSpawn.position.y) - (mouseClickPosition.y);
-            var rotation = Quaternion.FromToRotation(Vector3.up, shotSpawn.position - mouseClickPosition);
-            Rigidbody2D newShotrb2d = Instantiate(shot, shotSpawn.position, rotation) as Rigidbody2D;
-            newShotrb2d.velocity = new Vector2(1, xvelocityVector / yvelocityVector) * BOLT_SPEED;
+			Vector3 bullet_dir = mouseClickPosition - shotSpawn.position;
+			bullet_dir = new Vector3(bullet_dir.x, bullet_dir.y, 0);
+			bullet_dir.Normalize();
+
+			//var rotation = Quaternion.FromToRotation(Vector3.up, shotSpawn.position - mouseClickPosition);
+            GameObject bolt = Instantiate(shot, shotSpawn.position, Quaternion.identity) as GameObject;
+			var rb2dBolt = bolt.GetComponent<Rigidbody2D>();
+            rb2dBolt. velocity = bullet_dir * BOLT_SPEED;
+			bolt.transform.right = bullet_dir; 
         }
 	}
 

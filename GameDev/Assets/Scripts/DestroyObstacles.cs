@@ -11,9 +11,4 @@ public class DestroyObstacles : MonoBehaviour {
 	{
 		Destroy (other.gameObject);
 	}
-
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
