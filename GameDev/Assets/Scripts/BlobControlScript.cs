@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 public class BlobControlScript : MonoBehaviour {
 
@@ -8,11 +8,12 @@ public class BlobControlScript : MonoBehaviour {
 	
 	}
 	
- void OnTriggerEnter2D(Collider2D other)
-{
-		if (other.gameObject.CompareTag ("Player")) {
+ 	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag ("Player")) 
+		{
 			var ccs = other.gameObject.GetComponent<CharacterControlScript>();
-			ccs.isDead = true;
+			ccs.Die();
 		}
-
+	}
 }

@@ -54,6 +54,11 @@ public class CharacterControlScript : MonoBehaviour {
         }
 	}
 
+	public void Die()
+	{
+		Application.LoadLevel(Application.loadedLevel);
+	}
+
 	void FixedUpdate()
 	{
 		if (jump) {

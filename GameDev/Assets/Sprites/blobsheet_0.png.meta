@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ea6e61241d00c4a4b9a745e49c472567
-timeCreated: 1431761195
+timeCreated: 1432673618
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -87,6 +87,7 @@ TextureImporter:
     21300160: blobsheet_0_80
     21300162: blobsheet_0_81
     21300164: blobsheet_0_82
+    21300166: blobsheet_0_83
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -961,6 +962,16 @@ TextureImporter:
         height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: blobsheet_0_83
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 445
+        width: 98
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
